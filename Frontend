@@ -1,1 +1,10 @@
+<h2>{{ job.title }} – Skill Challenge 🎯</h2>
+
+<p>{{ challenge.question }}</p>
+
+<form method="post" action="{% url 'submit_challenge' challenge.id %}">
+    {% csrf_token %}
+    <textarea name="answer" rows="4"></textarea><br><br>
+    <button type="submit">Submit & Continue</button>
+</form>
 
